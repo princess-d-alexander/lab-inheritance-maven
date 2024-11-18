@@ -20,6 +20,7 @@ public class NamedCounter extends BasicCounter {
   public NamedCounter(String counterName, int start) {
     super(start);
     this.name = counterName;
+    // System.err.printf("NamedCounter(%s, %d)\n", name, start); 
   } // NamedCounter(String, int)
 
   /**
