@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import edu.grinnell.csc207.util.BasicCounter;
 import edu.grinnell.csc207.util.Counter;
 import edu.grinnell.csc207.util.NamedCounter;
+import edu.grinnell.csc207.util.Tally;
 
 /**
  * Tests of our counter class.
@@ -41,4 +42,18 @@ public class CounterTests {
     assertEquals(123, beta.get(), "reset beta");
     assertEquals(-5, gamma.get(), "reset gamma");
   } // test1()
+
+  /**
+   * Tests to check to see if Tally is implemented correctly and extends
+   * the Basic Counter Class
+   */
+  @Test
+  public void testTallyInheritance() throws Exception {
+    Counter alpha = new Tally(0);
+    assertEquals(0, alpha.get(), "original alpha");
+    alpha.increment();
+    assertEquals(1, alpha.get(), "incremented alpha");
+    alpha.reset();
+    assertEquals(0, alpha.get(), "reset alpha");
+}
 } // class CounterTests
